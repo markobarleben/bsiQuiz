@@ -1,0 +1,311 @@
+{
+    "questions": [
+        {
+            "questionId": 1,
+            "facts": "Sie sind Sachbearbeiter in der Personalabteilung. Ein Reporter bittet Sie für einen Artikel zum Thema „Die steigende Zahl von Beamten im öffentlichen Dienst“ eine Liste mit Namen aller Mitarbeiter, sortiert nach Beamten- und Beschäftigtenstatus zu schicken. Der Reporter weist darauf hin, dass kein Verstoß gegen den Datenschutz vorliege, da die Namen aller Mitarbeiter in den öffentlichen einsehbaren Organigrammen zu erkennen wären.",
+            "text_question": "Geben Sie dem Reporter die Liste?",
+            "text_answer": {
+                "answer": [
+                    "Ja",
+                    "Nein"
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Sehr gefährlich! Der Reporter würde Ihnen alles erzählen, um an die vertraulichen Daten zu gelangen. Namen, Stellenzeichen, Dienstsitz, Raumnummer und die dienstliche Telefonnummer sind im Organigramm einsehbar. Ob ein Mitarbeiter Beamter oder Beschäftigter ist, geht daraus nicht hervor.",
+                    "Zu Recht! Der Status eines Mitarbeiters ist streng vertraulich. Eine Personalabteilung darf allgemeine Daten, Zahlen und Statistiken über Mitarbeiterzahlen heraus geben, aber keine vertraulichen personenbezogenen Daten."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    1
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 2,
+            "facts": "Sie sind Mitarbeiter im Bürgeramt. Ein großer Mann mit Glatze und Tattoos auf dem ganzen Körper will die neue Meldeadresse seiner Ehefrau haben. Die beiden hätten sich getrennt und er will ihr ihre restlichen Sachen vorbei bringen. Der Bürger macht einen bedrohlichen Eindruck. Sie sind allein im Büro und haben Angst.",
+            "text_question": "Geben Sie ihm die Daten? ",
+            "text_answer": {
+                "answer": [
+                    "Ja",
+                    "Nein"
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Sind Sie sich bewusst, dass Sie möglicherweise ein Menschenleben gefährden? Es wird schon seinen Grund haben, weshalb er die neue Adresse nicht hat. ",
+                    "Sie haben das richtige getan, riskieren aber den Mann wütend zu machen. Möglicherweise haben Sie damit aber die Frau geschützt. Für Ihre Sicherheit ist gesorgt, denn der Notfall-Knopf kann jederzeit getätigt werden. "
+                ]
+            },
+            "answerId": {
+                "id": [
+                    1
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 3,
+            "facts":"< >",
+            "text_question": "Schließen Sie Ihre Programme (in diesem Fall Microsoft Word), wenn Sie diese gerade nicht verwenden?",
+            "text_answer": {
+                "answer": [
+                    "Sie bitten den Bürger einen Moment draußen Platz zu nehmen, damit Sie eine Kopie machen.",
+                    "Sofort einem entsprechend ausgebildeten Fachmann vorzeigen, damit beim Schließen des Programms oder Herunterfahren des Computers keine Daten verloren gehen."
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                "Dadurch sparen Sie Ihrer Behörde Kopiekosten, aber es bedeutet gleichzeitig einen Mehraufwand für den Bürger. Der Bürger müsste noch einmal wegen demselben Anliegen wieder kommen und dies könnte für ihn weitere Folgen nach sich ziehen.",
+                "Da Sie freundlich und bürgerorientiert arbeiten sollen, tun Sie dem Bürger den Gefallen und machen schnell eine Kopie. Damit ist Zeit geplant und Sie können den Vorgang schneller bearbeiten."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    0
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 4,
+            "facts": "Sie sind Mitarbeiter im öffentlichen Dienst und gehen um 12 Uhr in die Mittagspause.",
+            "text_question": "Was müssen Sie beachten?",
+            "text_answer": {
+                "answer": [
+                    "PC sperren",
+                    "Tür abschließen",
+                    "Zigarette aus machen",
+                    "Schränke abschließen"
+                ]
+            },
+            "answer_reason":{
+                "reason":[
+                    "Leider falsch, wenn Sie ihr Büro ohne Sicherheitsmaßnahmen verlassen können Sie damit viel Schaden anrichten.",
+                    "In diesem Feld sollte eine Antwort stehen"
+                ]
+            },
+            "answerId": {
+                "id": [
+                    0,
+                    1,
+                    3
+                ]
+            },
+            "points": {
+                "point": 3
+            }
+        },
+         {
+            "questionId": 5,
+            "facts": "Sie sind Mitarbeiter im öffentlichen Dienst und gehen um 12 Uhr in die Mittagspause.",
+            "text_question": "Was müssen Sie beachten?",
+            "text_answer": {
+                "answer": [
+                    "PC sperren",
+                    "Tür abschließen",
+                    "Nichts",
+                    "Schränke abschließen"
+                ]
+            },
+            "answer_reason":{
+                "reason":[
+                    "Leider falsch, wenn Sie ihr Büro ohne Sicherheitsmaßnahmen verlassen können Sie damit viel Schaden anrichten.",
+                    "In diesem Feld sollte eine Antwort stehen"
+                ]
+            },
+            "answerId": {
+                "id": [
+                    0,
+                    1,
+                    3
+                ]
+            },
+            "points": {
+                "point": 3
+            }
+        },
+         {
+            "questionId": 6,
+            "facts": "Sie sind Mitarbeiter im öffentlichen Dienst und gehen um 12 Uhr in die Mittagspause.",
+            "text_question": "Was müssen Sie beachten?",
+            "text_answer": {
+                "answer": [
+                    "PC sperren",
+                    "Tür abschließen",
+                    "Nichts",
+                    "Schränke abschließen"
+                ]
+            },
+            "answer_reason":{
+                "reason":[
+                    "Leider falsch, wenn Sie ihr Büro ohne Sicherheitsmaßnahmen verlassen können Sie damit viel Schaden anrichten.",
+                    "In diesem Feld sollte eine Antwort stehen"
+                ]
+            },
+            "answerId": {
+                "id": [
+                    0,
+                    1,
+                    3
+                ]
+            },
+            "points": {
+                "point": 3
+            }
+        },
+         {
+            "questionId": 7,
+            "facts": "Sie sind Mitarbeiter im öffentlichen Dienst und gehen um 12 Uhr in die Mittagspause.",
+            "text_question": "Was müssen Sie beachten?",
+            "text_answer": {
+                "answer": [
+                    "PC sperren",
+                    "Tür abschließen",
+                    "Nichts",
+                    "Schränke abschließen"
+                ]
+            },
+            "answer_reason":{
+                "reason":[
+                    "Leider falsch, wenn Sie ihr Büro ohne Sicherheitsmaßnahmen verlassen können Sie damit viel Schaden anrichten.",
+                    "In diesem Feld sollte eine Antwort stehen"
+                ]
+            },
+            "answerId": {
+                "id": [
+                    0,
+                    1,
+                    3
+                ]
+            },
+            "points": {
+                "point": 3
+            }
+        },
+        {
+            "questionId": 8,
+            "facts": "Sie sind Mitarbeiter im öffentlichen Dienst und gehen um 12 Uhr in die Mittagspause.",
+            "text_question": "Was müssen Sie beachten?",
+            "text_answer": {
+                "answer": [
+                    "PC sperren",
+                    "Tür abschließen",
+                    "Nichts",
+                    "Schränke abschließen"
+                ]
+            },
+            "answer_reason":{
+                "reason":[
+                    "Leider falsch, wenn Sie ihr Büro ohne Sicherheitsmaßnahmen verlassen können Sie damit viel Schaden anrichten.",
+                    "In diesem Feld sollte eine Antwort stehen"
+                ]
+            },
+            "answerId": {
+                "id": [
+                    0,
+                    1,
+                    3
+                ]
+            },
+            "points": {
+                "point": 3
+            }
+        },
+        {
+            "questionId": 9,
+            "facts": "Sie sind Mitarbeiter im öffentlichen Dienst und gehen um 12 Uhr in die Mittagspause.",
+            "text_question": "Was müssen Sie beachten?",
+            "text_answer": {
+                "answer": [
+                    "PC sperren",
+                    "Tür abschließen",
+                    "Nichts",
+                    "Schränke abschließen"
+                ]
+            },
+            "answer_reason":{
+                "reason":[
+                    "Leider falsch, wenn Sie ihr Büro ohne Sicherheitsmaßnahmen verlassen können Sie damit viel Schaden anrichten.",
+                    "In diesem Feld sollte eine Antwort stehen"
+                ]
+            },
+            "answerId": {
+                "id": [
+                    0,
+                    1,
+                    3
+                ]
+            },
+            "points": {
+                "point": 3
+            }
+        },
+        {
+            "questionId": 10,
+            "facts": "Sie sind Mitarbeiter im öffentlichen Dienst und gehen um 12 Uhr in die Mittagspause.",
+            "text_question": "Was müssen Sie beachten?",
+            "text_answer": {
+                "answer": [
+                    "PC sperren",
+                    "Tür abschließen",
+                    "Nichts",
+                    "Schränke abschließen"
+                ]
+            },
+            "answer_reason":{
+                "reason":[
+                    "Leider falsch, wenn Sie ihr Büro ohne Sicherheitsmaßnahmen verlassen können Sie damit viel Schaden anrichten.",
+                    "In diesem Feld sollte eine Antwort stehen"
+                ]
+            },
+            "answerId": {
+                "id": [
+                    0,
+                    1,
+                    3
+                ]
+            },
+            "points": {
+                "point": 3
+            }
+        },
+        {
+            "questionId": 11,
+            "facts": "Sie sind Mitarbeiter im öffentlichen Dienst und gehen um 12 Uhr in die Mittagspause.",
+            "text_question": "Was müssen Sie beachten?",
+            "text_answer": {
+                "answer": [
+                    "PC sperren",
+                    "Tür abschließen",
+                    "Nichts",
+                    "Schränke abschließen"
+                ]
+            },
+            "answer_reason":{
+                "reason":[
+                    "Leider falsch, wenn Sie ihr Büro ohne Sicherheitsmaßnahmen verlassen können Sie damit viel Schaden anrichten.",
+                    "In diesem Feld sollte eine Antwort stehen"
+                ]
+            },
+            "answerId": {
+                "id": [
+                    0,
+                    1,
+                    3
+                ]
+            },
+            "points": {
+                "point": 3
+            }
+        }
+    ]
+}

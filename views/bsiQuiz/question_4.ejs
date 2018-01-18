@@ -1,0 +1,62 @@
+
+<div class="row justify-content-md-center">
+    <div class="col-md-10" id="question-contend">
+        <div class="questionBox" data-id='4'>
+
+            <p id="facts-box" style="font-style:italic">
+                " <%- data.questions[3].facts %> "
+            </p>
+
+            <button type="button" class="btn btn-sm" id="question-button">Question</button>
+
+            <p id="question">
+                <%- data.questions[3].text_question %>
+            </p>
+
+        </div>
+    </div>
+</div>
+<div class="row justify-content-sm-center" id="answerArea">
+    <div class="col-sm-5">
+        <div class="answerBox-multiTextLine" data-id="1" style="cursor: pointer;" checked="checked">
+
+            <p id="answer-text-multiLine">
+                <%- data.questions[3].text_answer[0].answer_1 %>
+            </p>
+
+        </div>
+    </div>
+    <div class="col-sm-5">
+        <div class="answerBox-multiTextLine" style="cursor: pointer;" data-id='2'>
+
+            <p id="answer-text-multiLine">
+                <%- data.questions[3].text_answer[0].answer_2 %>
+            </p>
+
+        </div>
+    </div>
+     <div class="col-sm-5">
+        <div class="answerBox-multiTextLine" style="cursor: pointer;" data-id='3'>
+
+            <p id="answer-text-multiLine">
+                <%- data.questions[3].text_answer[0].answer_3 %>
+            </p>
+
+        </div>
+    </div>
+   <div class="col-sm-5">
+        <div class="answerBox-multiTextLine" style="cursor: pointer;" data-id='4'>
+
+            <p id="answer-text-multiLine">
+                <%- data.questions[3].text_answer[0].answer_4 %>
+            </p>
+
+        </div>
+    </div>
+</div>
+  
+<div class="col-md-12">
+    <div class="modalButton">
+        <button class="btn" data-toggle="modal" data-target="#myModal">Got it !</button>
+    </div>
+</div>

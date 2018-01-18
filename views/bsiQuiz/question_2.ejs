@@ -1,0 +1,44 @@
+<h3>BSI-Quiz Frage <span> <%- data.questionId %>  von 30</span></h3>
+
+<div class="row justify-content-md-center">
+    <div class="col-md-10" id="question-contend">
+        <div class="questionBox" data-id='2'>
+
+            <p id="facts-box">
+                " <%- data.facts %> "
+            </p>
+
+            <button type="button" class="btn btn-sm" id="question-button">Question</button>
+
+            <p id="question">
+                <%- data.text_question %>
+            </p>
+
+        </div>
+    </div>
+</div>
+<div class="row justify-content-md-center" id="answerArea">
+    <div class="col-auto">
+        <div class="answerBox_boolean" data-id="0" style="cursor: pointer;" checked="checked">
+
+            <p id="answer-text-boolean">
+                <%- data.text_answer[0].answer_1 %>
+            </p>
+
+        </div>
+    </div>
+    <div class="col-auto">
+        <div class="answerBox_boolean" style="cursor: pointer;" data-id='1'>
+
+            <p id="answer-text-boolean">
+                <%- data.text_answer[0].answer_2 %>
+            </p>
+
+        </div>
+    </div>
+</div>
+    <div class="col-md-12">
+        <div class="nextButton">
+            <button class="btn">NEXT QUESTION</button>
+        </div>
+    </div>

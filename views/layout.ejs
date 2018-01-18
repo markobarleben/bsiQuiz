@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%=typeof title == 'undefined' ? 'BSI-Quiz' : title%>
+  </title>
+
+  <!-- Viewport mobile tag for sensible mobile support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <style>
+    html {
+      min-height: 100vh;
+    }
+
+    body {
+      height: 100%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background: linear-gradient(0deg, white, blue 80%);
+      background: rgb(0, 130, 222);
+      /* Old browsers */
+      background: -moz-linear-gradient(top, rgba(0, 130, 222, 1) 0%, rgba(0, 130, 222, 1) 52%, rgba(51, 190, 255, 1) 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, rgba(0, 130, 222, 1) 0%, rgba(0, 130, 222, 1) 52%, rgba(51, 190, 255, 1) 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, rgba(0, 130, 222, 1) 0%, rgba(0, 130, 222, 1) 52%, rgba(51, 190, 255, 1) 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0082de', endColorstr='#33beff', GradientType=0);
+      /* IE6-9 */
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    header {
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      padding-top: 20px;
+      background: #55D6BE;
+    }
+
+    header h1 {
+      text-align: center;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 300;
+      color: #DDFFF7;
+      font-size: 2em;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      min-height: 100%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      height: auto !important;
+      margin-bottom: 70px;
+    }
+
+    .container h1 {
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 200;
+      color: #DDFFF7;
+      margin-top: 30px;
+    }
+
+    .container h3 {
+      text-align: center;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 200;
+      font-size: 1.4em;
+      color: #DDFFF7;
+    }
+
+    .container .answerArea {
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+
+    .modalButton {
+      float: right !important;
+      margin-top: 5%;
+      margin-right: 0;
+      margin-bottom: 2%;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 300;
+    }
+
+    #facts-box {
+      margin-top: 3%;
+      text-align: justify;
+      margin-bottom: 5%;
+      color: #DDFFF7;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.1em;
+    }
+
+    .answerArea {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 7%;
+      width: 100%;
+      height: 100%;
+    }
+
+    .answerArea>[class*='.answerBox_boolean'] {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .row-eq-height>[class^=col]:first-of-type {
+      display: flex;
+    }
+
+    .row-eq-height>[class^=col]:first-of-type .answerBox_boolean {
+      flex-grow: 1;
+    }
+
+    .row_question {
+      width: 100%;
+    }
+
+    .answerBox_boolean {
+      border: 1px solid #DDFFF7;
+      border-radius: 1px;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      margin: 2%;
+      margin-top: 30px;
+    }
+
+    .answerBox_boolean p {
+      color: #DDFFF7;
+      text-align: left;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 300;
+      font-size: 1em;
+      width: 100%;
+    }
+
+    .answerBox_boolean p:last-child {
+      margin-bottom: 5%;
+      margin-top: 5%;
+    }
+
+    .marked {
+      background: #14AAA3;
+      border: 1px solid #14AAA3;
+    }
+
+    #question {
+      text-align: center;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-size: 1.2em;
+    }
+
+    .btn {
+      color: #DDFFF7;
+      background: #1A1651;
+      font-size: 1.2em;
+      border-radius: 3px;
+    }
+
+    .questionBox {
+      text-align: center;
+      padding-bottom: 2%;
+      border-bottom: 1px solid #DDFFF7;
+      margin-top: 50px;
+    }
+
+    #formField {
+      text-align: center;
+      margin: auto;
+    }
+
+    .rowMainPage {
+      margin-top: 5%;
+      text-align: center;
+    }
+
+    .rowMainPage .col_input {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+
+    .rowMainPage .col_input #input {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+
+    .introduction {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .intro {
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-size: 1.1em;
+      color: #DDFFF7;
+      text-align: justify;
+    }
+
+    #input_Username {
+      border: 3px dashed #1A1651;
+      background: #DDFFF7;
+      color: #1A1651;
+      font-size: 1.5em;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    #submit_btn {
+      width: 100px;
+      margin-left: 4%;
+      flex-shrink: 0;
+    }
+
+    .dataPolicy {
+      color: #DDFFF7;
+      float: left;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 300;
+      font-size: 0.8em
+    }
+
+    .circle_in_modal {
+      width: 100px;
+      height: 100px;
+      background: #14AAA3;
+      -moz-border-radius: 100px;
+      -webkit-border-radius: 100px;
+      border-radius: 100px;
+      margin: 0 auto;
+
+      display: flex;
+      /* place items in column */
+      flex-direction: column;
+      /* center flex items horizontally */
+      align-items: center;
+      /* center all content vertically */
+      justify-content: center;
+    }
+
+    .points_in_circle {
+      color: #1A1651;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 300;
+      font-size: 3em;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .modal-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .resultModalBody {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-left: 30px;
+    }
+
+
+    .modal_right {
+      border-left: 1px solid black;
+      color: #1A1651;
+      display: flex;
+      /* place items in column */
+      flex-direction: column;
+      /* center flex items horizontally */
+      align-items: center;
+      /* center all content vertically */
+    }
+
+    .modal_left {
+      text-align: justify;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 300;
+      color: #1A1651;
+    }
+
+
+    .row-final {
+      min-height: 600px;
+      height: 600px;
+    }
+
+    .row-final h1 {
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 300;
+      margin: 0 auto;
+      ;
+    }
+
+    .row-final .final {
+      margin-top: 20px;
+      display: inline-block;
+      margin: 0 auto;
+    }
+
+    .final h3 {
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      color: #DDFFF7;
+      text-align: left;
+    }
+
+    .final ul {
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 300;
+      font-size: 1.3em;
+      color: #DDFFF7;
+      list-style-type: none;
+      text-align: left;
+      padding-top: 5px;
+      margin: 0 auto;
+    }
+
+    .final ul .btn {
+      float: right;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+
+    .final .list-group-item {
+      background: transparent;
+      padding-bottom: 10px;
+      padding-top: 5px;
+      margin-top: 5px;
+    }
+
+    .card h6 {
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 300;
+      color: #1A1651;
+    }
+
+    .card .card-header {
+      color: #1A1651;
+    }
+
+    .card #collapseOne p {
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 300;
+      color: #1A1651;
+      margin: 0 auto;
+      padding: 10px;
+    }
+
+    .fa {
+      color: #1A1651;
+    }
+    /*
+    .card-header .fa {
+      transition: .3s transform ease-in-out;
+    }
+
+    .card-header .collapsed .fa {
+      transform: rotate(90deg);
+    }
+    */
+
+    .footer {
+      bottom: 0;
+      width: 100%;
+      height: 60px;
+      padding: 1%;
+      position: absolute;
+      background: #55D6BE;
+    }
+
+    .footerContainer a {
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 300;
+      font-size: 1em;
+      color: #DDFFF7;
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+    #modalTeam ul {
+      list-style-type: circle;
+      display: table-cell;
+    }
+
+    .headCertificate {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .headCertificate img {
+      margin-bottom: 5%;
+      margin-top: 2%;
+    }
+
+    .contentCertificate {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 3%;
+      color: white;
+    }
+
+    .contentCertificate p {
+      margin-top: 3%;
+    }
+
+    .bottomCertificate {
+      text-align: left;
+      color: white;
+      margin-top: 5%;
+      margin-left: 10%;
+    }
+
+    .printArea {
+      border: 1px solid white;
+      padding-left:50px;
+      padding-right: 50px;
+    }
+
+    iframe {
+    visibility: hidden;
+    position: absolute;
+    left: 0; top: 0;
+    height:0; width:0;
+    border: none;
+} 
+    /* iPhone 6 */
+
+    @media only screen and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) {
+
+      .container h1 {
+        font-size: 1.7em;
+      }
+
+      .dataPolicy {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+        font-size: 0.7em;
+      }
+
+
+      #facts-box {
+        font-size: 1em;
+        text-align: left;
+      }
+
+
+      #question {
+        margin-bottom: 20px;
+        font-size: 1em;
+        width: 100%;
+      }
+
+      .resultModalBody {
+        margin: 0 auto;
+      }
+
+      .resultModalBody .modal_left p {
+        text-align: justify;
+        display: block;
+      }
+
+      .modal_right {
+        border-left: 0px solid white;
+        border-top: 1px solid #1A1651;
+        display: flex;
+        /* place items in column */
+        flex-direction: column;
+        /* center flex items horizontally */
+        /* center all content vertically */
+        justify-content: center;
+        padding-top: 10px;
+      }
+
+      .answerBox_boolean p {
+        font-size: 0.9em;
+      }
+
+
+      .row-final {
+        margin-top: 20px;
+        min-height: 500px;
+        height: 550px;
+        width: 300px;
+      }
+
+      .row-final h1 {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+        margin: 0 auto;
+      }
+
+      .row-final .final {
+        display: inline-block;
+        margin: 0 auto;
+      }
+    }
+
+    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) and (-webkit-device-pixel-ratio: 3) {
+      .row-final {
+        margin-top: 20px;
+        min-height: 500px;
+        height: 500px;
+        width: 350px;
+      }
+
+      .row-final h1 {
+        font-size: 2em;
+      }
+      .resultModalBody {
+        margin: 0 auto;
+      }
+      .modal_right {
+        border-left: 0px solid white;
+        border-top: 1px solid #1A1651;
+        display: flex;
+        /* place items in column */
+        flex-direction: column;
+        /* center flex items horizontally */
+        /* center all content vertically */
+        justify-content: center;
+        padding-top: 10px;
+      }
+    }
+
+    @page {
+      size: 21cm 29.7cm;
+      margin: 30mm 30mm 30mm 30mm;
+    }
+
+    @media print {
+
+      .printButton {
+        display: none;
+      }
+
+      .printArea {
+        width: 100%;
+        height: 100%;
+      }
+
+      .printArea .headCertificate h1 {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+        color: black;
+      }
+
+      .printArea .contentCertificate {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+        color: black;
+      }
+
+      .printArea .contentCertificate p {
+        margin-top: 10%;
+      }
+
+      .contentCertificate img {
+        display: block;
+      }
+
+      .printArea .bottomCertificate {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+        color: black;
+        margin-top: 20%;
+        margin-left: 0;
+      }
+
+      .footer {
+        display: none;
+      }
+    }
+    /* Large devices (desktops, 992px and up) */
+
+    @media (min-width: 992px) {
+
+      .container {
+        margin-top: 40px;
+      }
+    }
+  </style>
+
+  <!--STYLES-->
+  <link rel="stylesheet" href="/styles/bootstrap/css/bootstrap-grid.css">
+  <link rel="stylesheet" href="/styles/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="/styles/bootstrap/css/bootstrap-reboot.css">
+  <link rel="stylesheet" href="/styles/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="/styles/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/styles/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/bootstrap/css/font-awesome.css">
+  <link rel="stylesheet" href="/styles/bootstrap/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/styles/importer.css">
+  <!--STYLES END-->
+
+  <link rel="stylesheet" href="/styles/bootstrap/css/bootstrap-grid.css">
+  <link rel="stylesheet" href="/styles/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="/styles/bootstrap/css/bootstrap-reboot.css">
+  <link rel="stylesheet" href="/styles/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="/styles/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/styles/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <%- body %>
+
+    <div id="modalTeam" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header" style="background:#1A1651; color:aliceblue">
+            <h4 class="modal-title" style="text-align-last: center">Projekt-Team</h4>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li>Laura Schluricke </li>
+              <li>Stella Schmohl </li>
+              <li>Laura Kühn</li>
+              <li>Tu Anh Le Cong</li>
+              <li>Katja Belkin</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modalInformation" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header" style="background:#1A1651; color:aliceblue">
+            <h4 class="modal-title" style="text-align-last: center">Projekt-Information</h4>
+          </div>
+          <div class="modal-body information">
+            <p>Dies ist ein Projekt von Studenten des Studiengangs Verwaltung und Recht an der Technischen Hochschule Wildau.
+              Ziel dieses Projekts ist es, Mitarbeiter der öffentlichen Verwaltung mit dem Thema Datenschutz und -sicherheit
+              spielerisch zu sensibilisieren.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/dependencies/jquery-3.2.1.min.js"></script>
+    <script src="/js/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="/js/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/bootstrap/js/bootstrap.js"></script>
+    <script src="/js/bootstrap/js/bootstrap.min.js"></script>
+    <!--SCRIPTS END-->
+
+    <script src="/js/dependencies/jquery-3.2.1.min.js"></script>
+    <script src="/js/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="/js/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/bootstrap/js/bootstrap.js"></script>
+    <script src="/js/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.7/popper.js"></script>
+
+
+    <script>
+      $(document).ready(function () {
+
+        var questionId = $('.questionBox').data('id')
+        var answerid = []
+
+        $('div.answerBox_boolean').on('click', function () {
+          var boxId = $(this).data('id');
+
+          if ($(this).hasClass('marked')) {
+            for (i = 0; i < answerid.length; i++) {
+              if (answerid[i] == boxId) {
+                answerid.splice(i, 1);
+              }
+            }
+            $(this).removeClass('marked');
+          } else {
+            $(this).addClass('marked');
+            answerid.push(boxId);
+          }
+        });
+
+        $('#myModal').on('show.bs.modal', function (event) {
+          var leftModal = $(this)
+          var rightModal = $(this)
+          jQuery.ajax({
+            type: "post",
+            dataType: "json",
+            url: "/validateAnswer",
+            data: { answerid: answerid, questionId: questionId },
+            success: function (data) {
+              leftModal.find('.modal-body p').html(data[0]);
+              rightModal.find('.modal-body .points_in_circle').html(data[2]);
+              event.preventDefault();
+
+              $('#nextButton').on('click', function () {
+                const questionArrayLength = data[3].toString();
+                if (data[1] === questionArrayLength) {
+                 window.location.replace('/final');
+                } else {
+                  const nextQuestionId = parseInt(data[1]) + 1;
+                  window.location.replace(`/nextQuestion/${nextQuestionId}`);
+                }
+              })
+            },
+
+            error: function (data) {
+              if (data.status === 401) {
+                leftModal.find('.modal-body p').html(' (401) Sorry your session is timed out. You will immediately redirected to the start.');
+                rightModal.find('.modal-body .points_in_circle').html(0);
+
+                $('#nextButton').on('click', function () {
+                  window.location.replace('/')
+                })
+              }
+            }
+          });
+        });
+
+        $('input').on('keypress', function (e) {
+          if (e.keyCode == 13) {
+            e.preventDefault();
+          }
+        });
+
+        $('#submit_btn').on('click', function () {
+          var username = $('#input').find("input[name='inputFromUser']").val();
+          var postUserData = $.post('/userInput', { username: username })
+          postUserData.done(function (dataResonse) {
+
+            if (dataResonse == null || dataResonse == 'undefined' || dataResonse == '') {
+              alert('Dein Name ist bereits vergeben! Bitte wähle einen anderen.')
+              dataResonse.preventDefault();
+            } else {
+              window.location.assign('/nextQuestion/1');
+            }
+          })
+        });
+
+        $('.printButton').on('click', function () {
+          window.print();
+        })
+
+        $('#returnToFirstQuestion').on('click', function () {
+          window.location.assign('/nextQuestion/1');
+        });
+
+        $('#getYourCertificate').on('click', function () {
+
+            window.frames["printf"].print();
+
+            });
+
+
+      });
+    </script>
+
+</body>
+
+</html>

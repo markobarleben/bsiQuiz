@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row row-final">
+    <h1> Danke für's mitmachen! </h1>
+    <div class="col-lg-7 col-md-7 col-sm-12 col-sx-12 final" data-id='final'>
+      <h3>Dein Testergebnis:</h3>
+
+      <% var reachablePercent = getTheRightPartial %>
+        <%if (reachablePercent === 0) { %>
+          <%- partial('../partials/rightAnswer.ejs') %>
+            <% } else if (reachablePercent === 1) { %>
+              <%- partial('../partials/falseAnswer.ejs') %>
+                <% } %>
+
+    </div>
+  </div>
+</div>
+<footer class="footer">
+    <div class="footerContainer">
+        <div><a href="#" data-toggle="modal" data-target="#modalInformation">Information</a>
+            <a href="#" data-toggle="modal" data-target="#modalTeam">Team</a>
+            <a href="mailto:marko@hyph.me?Subject=Hello%20again" target="_top">Kontakt</a></div>
+    </div>
+</footer>
