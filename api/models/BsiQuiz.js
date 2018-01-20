@@ -31,8 +31,7 @@ module.exports = {
     },
     user_name: {
       type: 'string',
-      required: true,
-      unique: true
+      required: true
     },
     lastPage: {
       type:'string',
@@ -47,7 +46,7 @@ module.exports = {
     var points = option.points
 
     BsiQuiz.find({
-      user_name: user_name
+      id: user_name
     })
       .exec(function (err, user) {
         if (err) return cb(err);
