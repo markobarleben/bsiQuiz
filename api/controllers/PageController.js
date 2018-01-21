@@ -39,6 +39,8 @@ module.exports = {
 
                             var lastpage = parseInt(user[0].lastPage);
 
+                            sails.log(lastpage + ' <------------------ LASTPAGE')
+
                             if (lastpage < index) {
 
                                 BsiQuiz.saveLastPage({
