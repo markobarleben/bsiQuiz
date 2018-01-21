@@ -25,11 +25,7 @@ module.exports = {
                 return res.serverError()
 
             } else {
-
-                sails.log(user.id + ' <<<<<< ------------- user ID')
-
                 req.session.user = user.id
-
             }
 
             res.ok(req.session);

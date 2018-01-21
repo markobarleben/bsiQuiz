@@ -9,8 +9,6 @@ module.exports = {
 
     nextQuestion: function (req, res) {
 
-        sails.log(req.session.user  + ' <--------- session')
-
         if (!req.session.user) {
             return;
         }
@@ -37,13 +35,9 @@ module.exports = {
                         user_id: req.session.user
                     }, function (err, user) {
 
-                        sails.log(user + ' <<<<--------- user[0]')
-
                         if (err) { sails.log.error(err) } else {
 
                             var lastpage = parseInt(user[0].lastPage);
-
-                            sails.log(lastpage + ' <------------------ LASTPAGE')
 
                             if (lastpage < index) {
 
