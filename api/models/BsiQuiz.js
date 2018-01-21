@@ -42,7 +42,7 @@ module.exports = {
 
   checkUser: function (option, cb) {
 
-    var user_name = option.user_name;
+    var user_name = option.user_id;
     var points = option.points
 
     BsiQuiz.find({

@@ -37,7 +37,7 @@ module.exports = {
                         user_id: req.session.user
                     }, function (err, user) {
 
-                        sails.log(user[0] + ' <<<<--------- user[0]')
+                        sails.log(user + ' <<<<--------- user[0]')
 
                         if (err) { sails.log.error(err) } else {
 
