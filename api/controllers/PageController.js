@@ -17,8 +17,6 @@ module.exports = {
 
         index = parseInt(index);
 
-        sails.log(index + ' <----- index');
-
         var fs = require('fs');
         var validateFile = (__dirname + '/object.json')
 
@@ -34,7 +32,7 @@ module.exports = {
                     res.view('/');
                 } else {
                     BsiQuiz.checkUser({
-                        user_name: req.session.user
+                        user_id: req.session.user
                     }, function (err, user) {
 
                         if (err) { sails.log.error(err) } else {
@@ -105,7 +103,7 @@ module.exports = {
                     const getsumOfMaxPoints = calculateSumOfPoints(JSON_DATA);
 
                     BsiQuiz.checkUser({
-                        user_name: user_name
+                        user_id: user_name
                     }, function (err, user) {
 
                         if (err) {
@@ -116,8 +114,6 @@ module.exports = {
                             const idFromUser = user[0].id
                             const sumOfPoints = user[0].points
                             const lastPageFromUser = user[0].lastPage
-
-                            sails.log(lastPageFromUser + ' <----- lastpagefromUser')
 
                             function finalResult(getsumOfMaxPoints, sumOfPoints) {
                                 var sum = (sumOfPoints / getsumOfMaxPoints) * 100
@@ -179,23 +175,35 @@ module.exports = {
 
     certificate: function (req, res) {
 
-        var user_name = req.session.user
+        var user_id = req.session.user
 
-        function date() {
-            var date = new Date();
-            var day = date.getDate();
-            var year = date.getFullYear();
-            var month = date.getMonth();
-            month++;
+        BsiQuiz.checkUser({
+            user_id: user_id
+        }, function (err, user) {
+            if (err) {
+                sails.log.error(err)
+            } else {
 
-            var currentDay = (day + "." + month + "." + year)
+                const user_name = user[0].user_name;
 
-            return currentDay;
-        }
+                function date() {
+                    var date = new Date();
+                    var day = date.getDate();
+                    var year = date.getFullYear();
+                    var month = date.getMonth();
+                    month++;
 
-        var currentDay = date();
+                    var currentDay = (day + "." + month + "." + year)
 
-        res.view('bsiQuiz/certificate', { user_name: user_name, currentDay: currentDay });
+                    return currentDay;
+                }
+
+                var currentDay = date();
+
+                res.view('bsiQuiz/certificate', { user_name: user_name, currentDay: currentDay });
+
+            }
+        })
     }
 };
 

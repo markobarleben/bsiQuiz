@@ -439,17 +439,19 @@
 
     .printArea {
       border: 1px solid white;
-      padding-left:50px;
+      padding-left: 50px;
       padding-right: 50px;
     }
 
     iframe {
-    visibility: hidden;
-    position: absolute;
-    left: 0; top: 0;
-    height:0; width:0;
-    border: none;
-} 
+      visibility: hidden;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 0;
+      width: 0;
+      border: none;
+    }
     /* iPhone 6 */
 
     @media only screen and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) {
@@ -496,6 +498,14 @@
         /* center all content vertically */
         justify-content: center;
         padding-top: 10px;
+      }
+
+      .container .answerArea {
+        margin-top: 20px;
+      }
+
+      .answerBox_boolean {
+        margin-top: 1em;
       }
 
       .answerBox_boolean p {
@@ -646,7 +656,6 @@
               <li>Laura Kühn</li>
               <li>Tu Anh Le Cong</li>
               <li>Katja Belkin</li>
-                <li>Julia Bläßing</li>
             </ul>
           </div>
           <div class="modal-footer">
@@ -711,6 +720,7 @@
             $(this).removeClass('marked');
           } else {
             $(this).addClass('marked');
+            
             answerid.push(boxId);
           }
         });
@@ -731,7 +741,7 @@
               $('#nextButton').on('click', function () {
                 const questionArrayLength = data[3].toString();
                 if (data[1] === questionArrayLength) {
-                 window.location.replace('/final');
+                  window.location.replace('/final');
                 } else {
                   const nextQuestionId = parseInt(data[1]) + 1;
                   window.location.replace(`/nextQuestion/${nextQuestionId}`);
@@ -772,21 +782,14 @@
           })
         });
 
-        $('.printButton').on('click', function () {
-          window.print();
-        })
-
         $('#returnToFirstQuestion').on('click', function () {
           window.location.assign('/nextQuestion/1');
         });
 
         $('#getYourCertificate').on('click', function () {
 
-            window.frames["printf"].print();
-
-            });
-
-
+          window.frames["printf"].print();
+        });
       });
     </script>
 

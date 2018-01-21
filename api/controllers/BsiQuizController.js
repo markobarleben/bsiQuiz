@@ -49,7 +49,7 @@ module.exports = {
 
             BsiQuiz.checkUser({
 
-                user_name: user_name
+                user_id : user_name
 
             }, function (err, user) {
 
@@ -83,7 +83,7 @@ module.exports = {
 
 
                                         /** 
-                                        * sort numbers in answer array min to max
+                                        * sort answer array low to high data id
                                         */
 
                                         var answerId_Int = answer.answerid.map(Number);
