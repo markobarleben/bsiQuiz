@@ -9,6 +9,8 @@ module.exports = {
 
     nextQuestion: function (req, res) {
 
+        sails.log(req.session.user  + ' <--------- session')
+
         if (!req.session.user) {
             return;
         }

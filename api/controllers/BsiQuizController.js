@@ -26,6 +26,8 @@ module.exports = {
 
             } else {
 
+                sails.log(user.id + ' <<<<<< ------------- user ID')
+
                 req.session.user = user.id
 
             }
