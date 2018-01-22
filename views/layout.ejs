@@ -648,7 +648,6 @@ print
               }
             }
             $(this).removeClass('marked');
-            $('.buttonNext').attr('disabled', 'disabled')
           } else {
             $(this).addClass('marked');
             $('.buttonNext').removeAttr('disabled');
@@ -703,10 +702,8 @@ print
           var username = $('#input').find("input[name='inputFromUser']").val();
           var postUserData = $.post('/userInput', { username: username })
           postUserData.done(function (dataResonse) {
-
-            if (dataResonse == null || dataResonse == 'undefined' || dataResonse == '') {
-              alert('Dein Name ist bereits vergeben! Bitte wähle einen anderen.')
-              dataResonse.preventDefault();
+            if (dataResonse === 'error') {
+              alert('Bitte gebe einen Namen ein!')
             } else {
               window.location.assign('/nextQuestion/1');
             }

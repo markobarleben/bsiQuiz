@@ -10,62 +10,65 @@ module.exports = {
     nextQuestion: function (req, res) {
 
         if (!req.session.user) {
-            return;
-        }
+            return res.redirect('/');
+        } else if (req.session.authenticated !== true) {
+            return res.redirect('/')
+        } else {
 
-        var index = req.param('id');
+            var index = req.param('id');
 
-        index = parseInt(index);
+            index = parseInt(index);
 
-        var fs = require('fs');
-        var validateFile = (__dirname + '/object.json')
+            var fs = require('fs');
+            var validateFile = (__dirname + '/object.json')
 
-        fs.readFile(validateFile, function readFileCallback(err, data) {
-            if (err) {
-                console.log(err);
-            } else {
-                const questionIndex = index - 1;
-
-                const JSON_DATA = JSON.parse(data);
-
-                if (JSON_DATA.questions.length <= questionIndex || questionIndex < 0) {
-                    res.view('/');
+            fs.readFile(validateFile, function readFileCallback(err, data) {
+                if (err) {
+                    console.log(err);
                 } else {
-                    BsiQuiz.checkUser({
-                        user_id: req.session.user
-                    }, function (err, user) {
+                    const questionIndex = index - 1;
 
-                        if (err) { sails.log.error(err) } else {
+                    const JSON_DATA = JSON.parse(data);
 
-                            var lastpage = parseInt(user[0].lastPage);
+                    if (JSON_DATA.questions.length <= questionIndex || questionIndex < 0) {
+                        res.view('/');
+                    } else {
+                        BsiQuiz.checkUser({
+                            user_id: req.session.user
+                        }, function (err, user) {
 
-                            if (lastpage < index) {
+                            if (err) { sails.log.error(err) } else {
 
-                                BsiQuiz.saveLastPage({
-                                    user_id: user[0].id,
-                                    lastPage: index
-                                }, function (err, user) {
-                                    if (err) {
-                                        sails.log.error(err)
+                                var lastpage = parseInt(user[0].lastPage);
 
-                                    } else {
+                                if (lastpage < index) {
 
-                                        res.view('bsiQuiz/question_1', { data: JSON_DATA.questions[questionIndex], questionLength: JSON_DATA.questions.length });
-                                    }
-                                })
+                                    BsiQuiz.saveLastPage({
+                                        user_id: user[0].id,
+                                        lastPage: index
+                                    }, function (err, user) {
+                                        if (err) {
+                                            sails.log.error(err)
 
-                            } else {
+                                        } else {
 
-                                var lastPageFromUser = lastpage - 1;
+                                            res.view('bsiQuiz/question_1', { data: JSON_DATA.questions[questionIndex], questionLength: JSON_DATA.questions.length });
+                                        }
+                                    })
 
-                                res.view('bsiQuiz/question_1', { data: JSON_DATA.questions[lastPageFromUser], questionLength: JSON_DATA.questions.length });
+                                } else {
 
+                                    var lastPageFromUser = lastpage - 1;
+
+                                    res.view('bsiQuiz/question_1', { data: JSON_DATA.questions[lastPageFromUser], questionLength: JSON_DATA.questions.length });
+
+                                }
                             }
-                        }
-                    });
+                        });
+                    }
                 }
-            }
-        })
+            })
+        }
     },
 
     final: function (req, res) {

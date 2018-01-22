@@ -16,16 +16,22 @@ module.exports = {
 
         var username = req.body.username;
 
+        if(!username) {
+           return res.ok('error');
+        }
+
         BsiQuiz.createUser({
             user_name: username,
             points: 0
         }, function (err, user) {
 
             if (err) {
-                return res.serverError()
-
+                 return sails.log.error(err);
             } else {
-                req.session.user = user.id
+
+                req.session.user = user.id;
+                req.session.authenticated = true;
+
             }
 
             res.ok(req.session);
