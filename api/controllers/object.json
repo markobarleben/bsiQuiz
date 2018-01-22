@@ -2,7 +2,7 @@
     "questions": [
         {
             "questionId": 1,
-            "facts": "Sie sind Sachbearbeiter in der Personalabteilung. Ein Reporter bittet Sie für einen Artikel zum Thema „Die steigende Zahl von Beamten im öffentlichen Dienst“ eine Liste mit Namen aller Mitarbeiter, sortiert nach Beamten- und Beschäftigtenstatus zu schicken. Der Reporter weist darauf hin, dass kein Verstoß gegen den Datenschutz vorliege, da die Namen aller Mitarbeiter in den öffentlichen einsehbaren Organigrammen zu erkennen wären.",
+            "facts": "Sie sind Sachbearbeiter in der Personalabteilung. Ein Reporter bittet Sie für einen Artikel zum Thema „Die steigende Zahl von Beamten im öffentlichen Dienst“ eine Liste mit Namen aller Mitarbeiter, sortiert nach Beamten- und Beschäftigtenstatus zu schicken. Der Reporter weist darauf hin, dass kein Verstoß gegen den Datenschutz vorliege, da die Namen aller Mitarbeiter in den öffentli-chen einsehbaren Organigrammen zu erken-nen wären.",
             "text_question": "Geben Sie dem Reporter die Liste?",
             "text_answer": {
                 "answer": [
@@ -12,8 +12,8 @@
             },
             "answer_reason": {
                 "reason": [
-                    "Sehr gefährlich! Der Reporter würde Ihnen alles erzählen, um an die vertraulichen Daten zu gelangen. Namen, Stellenzeichen, Dienstsitz, Raumnummer und die dienstliche Telefonnummer sind im Organigramm einsehbar. Ob ein Mitarbeiter Beamter oder Beschäftigter ist, geht daraus nicht hervor.",
-                    "Zu Recht! Der Status eines Mitarbeiters ist streng vertraulich. Eine Personalabteilung darf allgemeine Daten, Zahlen und Statistiken über Mitarbeiterzahlen heraus geben, aber keine vertraulichen personenbezogenen Daten."
+                    "Sehr gefährlich! Der Reporter würde Ihnen alles erzählen, um an die vertraulichen Daten zu gelangen. Namen, Stellenzeichen, Dienstsitz, Raumnummer und die dienstliche Telefonnummer sind im Organigramm einseh-bar. Ob ein Mitarbeiter Beamter oder Beschäf-tigter ist, geht daraus nicht hervor.",
+                    "Zu Recht! Der Status eines Mitarbei-ters ist streng vertraulich. Eine Personalabtei-lung darf allgemeine Daten, Zahlen und Statis-tiken über Mitarbeiterzahlen herausgeben, aber keine vertraulichen personenbezogenen Daten."
                 ]
             },
             "answerId": {
@@ -27,43 +27,18 @@
         },
         {
             "questionId": 2,
-            "facts": "Sie sind Mitarbeiter im Bürgeramt. Ein großer Mann mit Glatze und Tattoos auf dem ganzen Körper will die neue Meldeadresse seiner Ehefrau haben. Die beiden hätten sich getrennt und er will ihr ihre restlichen Sachen vorbei bringen. Der Bürger macht einen bedrohlichen Eindruck. Sie sind allein im Büro und haben Angst.",
-            "text_question": "Geben Sie ihm die Daten? ",
+            "facts": "Sie werden im Büro zu einem dringenden Notfall gerufen während Sie an Ihrem PC beschäftigt sind.",
+            "text_question": "Wie gehen Sie vor?",
             "text_answer": {
                 "answer": [
-                    "Ja",
-                    "Nein"
+                    "Sie melden sich erst richtig ab, um zu verhindern, dass Unbefugte auf Ihren Account zugreifen können. ",
+                    "Sie melden sich nicht ab, da Sie davon ausgehen, dass Sie gleich wieder da sind."
                 ]
             },
             "answer_reason": {
                 "reason": [
-                    "Sind Sie sich bewusst, dass Sie möglicherweise ein Menschenleben gefährden? Es wird schon seinen Grund haben, weshalb er die neue Adresse nicht hat. ",
-                    "Sie haben das richtige getan, riskieren aber den Mann wütend zu machen. Möglicherweise haben Sie damit aber die Frau geschützt. Für Ihre Sicherheit ist gesorgt, denn der Notfall-Knopf kann jederzeit getätigt werden. "
-                ]
-            },
-            "answerId": {
-                "id": [
-                    1
-                ]
-            },
-            "points": {
-                "point": 1
-            }
-        },
-        {
-            "questionId": 3,
-            "facts":"< >",
-            "text_question": "Schließen Sie Ihre Programme (in diesem Fall Microsoft Word), wenn Sie diese gerade nicht verwenden?",
-            "text_answer": {
-                "answer": [
-                    "Sie bitten den Bürger einen Moment draußen Platz zu nehmen, damit Sie eine Kopie machen.",
-                    "Sofort einem entsprechend ausgebildeten Fachmann vorzeigen, damit beim Schließen des Programms oder Herunterfahren des Computers keine Daten verloren gehen."
-                ]
-            },
-            "answer_reason": {
-                "reason": [
-                "Dadurch sparen Sie Ihrer Behörde Kopiekosten, aber es bedeutet gleichzeitig einen Mehraufwand für den Bürger. Der Bürger müsste noch einmal wegen demselben Anliegen wieder kommen und dies könnte für ihn weitere Folgen nach sich ziehen.",
-                "Da Sie freundlich und bürgerorientiert arbeiten sollen, tun Sie dem Bürger den Gefallen und machen schnell eine Kopie. Damit ist Zeit geplant und Sie können den Vorgang schneller bearbeiten."
+                    "Leider falsch. Auch unter Zeitdruck sollte immer darauf geachtet werden, sich ordnungsgemäß abzumelden, um zu verhindern, dass Unbefugte ungehinderten Zugriff auf sensible und vertrauliche Daten Ihres Accounts zugreifen können.",
+                    "Richtig, der Schutz von sensiblen und vertraulichen Daten auf Ihrem Account hat immer höchste Priorität!"
                 ]
             },
             "answerId": {
@@ -76,32 +51,706 @@
             }
         },
         {
-            "questionId": 4,
-            "facts": "Sie sind Mitarbeiter im öffentlichen Dienst und gehen um 12 Uhr in die Mittagspause.",
-            "text_question": "Was müssen Sie beachten?",
+            "questionId": 3,
+            "facts": "Sie sollen im Archiv alte Akten vernichten.",
+            "text_question": "Wie sollte mit diesem Datenmüll umgegangen werden?",
             "text_answer": {
                 "answer": [
-                    "PC sperren",
-                    "Tür abschließen",
-                    "Zigarette aus machen",
-                    "Schränke abschließen"
+                    "Er kann mit allen anderen Dokumenten in den üblichen Papierkorb geworfen werden.",
+                    "Alle vertraulichen Daten sollten sofort unkenntlich gemacht werden, bevor der Müll in extra gekennzeichnete Papierkörbe sortiert wird. "
                 ]
             },
-            "answer_reason":{
-                "reason":[
-                    "Leider falsch, wenn Sie ihr Büro ohne Sicherheitsmaßnahmen verlassen können Sie damit viel Schaden anrichten.",
-                    "In diesem Feld sollte eine Antwort stehen"
+            "answer_reason": {
+                "reason": [
+                    "Sehr gefährlich! So wird Unbefugten der Zugriff auf diese Dokumente möglich und der Datenschutz ist somit nicht gewährleistet.",
+                    "Richtig gehandelt. Nur so kann der Datenschutz gewährleistet werden und die Daten vor Missbrauch durch Unbefugte geschützt werden."
                 ]
             },
             "answerId": {
                 "id": [
-                    0,
-                    1,
-                    3
+                    1
                 ]
             },
             "points": {
-                "point": 3
+                "point": 1
+            }
+        },
+        {
+            "questionId": 4,
+            "facts": "Sie arbeiten gerade an einem Bescheid als plötzlich eine Fehlermeldung des Computers angezeigt wird.",
+            "text_question": "Wie sollte bei einer Fehlmeldung während einer Datenerfassung gehandelt werden?",
+            "text_answer": {
+                "answer": [
+                    "Sofort einem entsprechend ausgebildeten Fachmann vorzeigen, damit beim Schließen des Programms oder Herunterfahren des Computers keine Daten verloren gehen.",
+                    "Mit „Ok“ bestätigen und nicht weiter beachten. "
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Es kann zu Fehlern beim Speichern der Daten kommen. Die Daten können somit verloren gehen.",
+                    "Dies ist der sicherste Weg den Verlust von Daten zu verhindern. Durch den Rat eines ausgebildeten Fachmanns können Fehlermeldungen eventuell auch in Zukunft vermieden werden."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    0
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 5,
+            "facts": "Ihr Schreibtisch besitzt ein abschließbares Fach für vertrauliche Gegenstände und Informationen.",
+            "text_question": "Wo bewahren Sie den Schlüssel dafür am Sichersten auf?",
+            "text_answer": {
+                "answer": [
+                    "In einer anderen Schublade, versteckt zwischen Büroutensilien.",
+                    "An einem geheimen Ort außerhalb des Büros, wo er gut geschützt aufbewahrt wird."
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Auch wenn der Schlüssel so nicht sofort sichtbar ist, kann er doch leicht gefunden werden. Die Sicherheit der Daten, die sich in diesem Schubfach befinden, ist somit nicht gewährleistet.",
+                    "Richtig! So ist es auch während Ihrer Abwesenheit nicht möglich, den Schlüssel zu entwenden und somit die Sicherheit der Daten, die sich in diesem Schubfach befinden, zu gefährden."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    1
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 6,
+            "facts": "Sie müssen wichtige Informationen von Ihrem Computer übertragen, finden aber keinen dienstlichen USB-Stick.",
+            "text_question": "Was tun Sie?",
+            "text_answer": {
+                "answer": [
+                    "Sie benutzen einen privaten USB-Stick.",
+                    "Sie machen sich auf die Suche nach einem sicheren dienstlichen USB-Stick und nehmen eventuelle Verzögerung des Arbeitsablaufs in Kauf."
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Auf privaten USB-Sticks können sich Viren und Trojaner befinden, von denen Sie nichts wissen. Das gefährdet den dienstlichen Computer und somit auch die darauf befindlichen Daten.",
+                    "Richtig gehandelt. Auf privaten USB-Sticks können sich Viren und Trojaner befinden und die Sicherheit der Daten auf dem Computer gefährden."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    1
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 7,
+            "facts": "Sie sind MitarbeiterIn im Personalamt und sitzen den ganzen Tag an Ihrem Computer. Es kommt plötzlich zu einem Feuer durch Überhitzung des Computers.",
+            "text_question": "Wie reagieren Sie?",
+            "text_answer": {
+                "answer": [
+                    "Ich weiß genau über die Brandschutzeinrichtung in meinem Büro Bescheid und greife zum Feuerlöscher, der sich direkt hinter der Tür befindet.",
+                    "Ich fange an zu schreien und versuche das Feuer auszuwedeln."
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Falsch! Durch Ihr Verhalten gefährden Sie sich und andere Personen. Sie sollten sich dringend über das Verhalten bei Feuer informieren und wissen an welcher Stelle sich der nächste Feuerlöscher befindet.",
+                    "Richtig gehandelt. Gut, dass Sie wissen an welcher Stelle sich die notwendigen Utensilien befinden."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    0
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 8,
+            "facts": "Der PC fordert für die Datensicherung monatlich ein Backup.",
+            "text_question": "Was tun Sie?",
+            "text_answer": {
+                "answer": [
+                    "Ich klicke auf morgen erinnern, da ich gerade an einem Bescheid schreibe.",
+                    "Obwohl ich zu tun habe, starte ich das Backup und hole mir in der Zeit einen Kaffee."
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Nicht richtig verhalten! Auch wenn Sie gerade arbeiten sollten Sie das Back up starten, denn Sie werden es nach dem Sie fertig sind bestimmt vergessen. Wieder holen Sie das nun täglich, steigt das Risiko immer weiter.",
+                    "Richtig! Sie sollten möglichst gleich das Backup starten, wenn der PC dies fordert. Vergessen Sie nicht beim Kaffee holen Ihr Büro abzuschließen."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    1
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 9,
+            "facts": "Sie sind MitarbeiterIn im Jugendamt und schreiben den ganzen Bescheide in Microsoft Word. Da Sie diese Arbeit nun abgeschlossen haben widmen Sie sich nun dem Beantworten Ihrer E-Mails.",
+            "text_question": "Schließen Sie Ihre Programme (in diesem Fall Microsoft Word), wenn Sie diese gerade nicht verwenden?",
+            "text_answer": {
+                "answer": [
+                    "Nein, ich könnte es ja gleich wieder gebrauchen. Deswegen läuft mein PC schon des Öfteren heiß.",
+                    "Ja, weil diese alle auf dem Desktop liegen und schnell zu öffnen sind."
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Vorsicht! Es besteht die Gefahr, dass Ihr PC überlastet und möglicherweise abstürzt.",
+                    "Weiter so, denn haben Sie zu viele Programme geöffnet, könnte Ihr Computer überlasten."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    1
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 10,
+            "facts": "Sie sind MitarbeiterIn im Tiefbauaamt und arbeiten einmal wöchentlich in dem Programm des Liegenschaftskatasters.",
+            "text_question": "Wo hinterlegen Sie Ihre Zugangsdaten für dieses Programm, wenn Sie es nur einmal in der Woche nutzen?",
+            "text_answer": {
+                "answer": [
+                    "In einem abschließbaren Schubfach.",
+                    "Es hängt an meiner Pinnwand neben dem Tisch, damit ich es gleich parat habe und nicht lange danach suchen muss."
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Sie müssen Ihre Aufbewahrung dringend überdenken, da auch andere problemlos an Ihre Passwörter kommen können und somit möglicherweise geschützte Daten in die falschen Hände geraten.",
+                    "Richtig. Passwörter richtig auszuwählen und aufzubewahren ist das A und O."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    0
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 11,
+            "facts": "Ihr PC verhält sich verdächtig (Programme starten nicht, Anzeigen von unbekannten Programmen, etc.).",
+            "text_question": "Wie reagieren Sie?",
+            "text_answer": {
+                "answer": [
+                    "Ich mache sofort einen Virenscan.",
+                    "Ich arbeite weiter. Manchmal spinnt die Technik einfach."
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Falsch! Es sollte regelmäßig ein Virenscan durchgeführt werden insbesondere, wenn sich Ihr PC verdächtig verhält.",
+                    "Richtig. Den Computer regelmäßig auf Viren zu kontrollieren ist wichtig."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    0
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 12,
+            "facts": "Sie sind SachbearbeiterIn im Jugendamt (Elterngeldstelle). Ein Bürger stellt bei Ihnen den Antrag auf Elterngeld und hat alle benötigten Unterlagen auf einem USB Stick dabei.",
+            "text_question": "Nehmen Sie den USB-Stick an? ",
+            "text_answer": {
+                "answer": [
+                    "Ja",
+                    "Nein"
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Vorsicht, durch einen externen Datenspeicher können ungewollt vertrauliche Daten wie persönliche Daten oder die finanzielle Vermögenssituation ausgespäht werden.",
+                    "Richtig entschieden, denn durch das Anschließen eines USB-Sticks kann das Netzwerk der Behörde angegriffen werden.."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    1
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 13,
+            "facts": "Sie sind MitarbeiterIn im Jugendamt (Unterhaltsvorschuss). Ein besorgter Familienvater kommt in die Sprechstunde und erzählt, dass er das Sorgerecht für seine Tochter hätte. Seine Noch-Ehefrau hätte das Kind entführt. Da er ein Schreiben von Ihnen bekommen hat, worin Sie ihn auffordern Unterhalt zu zahlen, will er von Ihnen den Aufenthaltsort seines Kindes haben. Der Mann macht einen vertrauenswürdigen Eindruck.",
+            "text_question": "Geben Sie ihm die Adresse seines Kindes?",
+            "text_answer": {
+                "answer": [
+                    "Ja",
+                    "Nein"
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Sie könnten damit das Wohl des Kindes sowie die der Kindesmutter gefährden. Den vermeintlich besorgten Vater an die Polizei zu verweisen wäre der rechtlich sichere Weg gewesen!",
+                    "Das ist der sichere Weg! Kann der Vater ein Gerichtsurteil mit alleinigem Sorgerecht vorlegen, ist die Polizei dafür zuständig."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    1
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 14,
+            "facts": "Sie sind MitarbeiterIn im Bürgeramt. Ein großer Mann mit Glatze und Tattoos auf dem ganzen Körper will die neue Meldeadresse seiner Ehefrau haben. Die beiden hätten sich getrennt und er will ihr ihre restlichen Sachen vorbeibringen. Der Bürger macht einen bedrohlichen Eindruck. Sie sind allein im Büro und haben Angst.",
+            "text_question": "Geben Sie ihm die Daten?",
+            "text_answer": {
+                "answer": [
+                    "Ja",
+                    "Nein"
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Sind Sie sich bewusst, dass Sie möglicherweise ein Menschenleben gefährden? Es wird schon seinen Grund haben, weshalb er die neue Adresse nicht hat.",
+                    "Sie haben das richtige getan, riskieren aber den Mann wütend zu machen. Möglicherweise haben Sie damit aber die Frau geschützt. Für Ihre Sicherheit ist gesorgt, denn der Notfall-Knopf kann jederzeit getätigt werden."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    1
+
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 15,
+            "facts": "Sie sind MitarbeiterIn im Bürgeramt und haben Sprechstunde. Ein Bürger möchte sich ummelden. Den neuen Mietvertrag hat der Bürger nur im Original bei. Sie benötigen für Ihre Unterlagen eine Kopie. Sie verlassen das Büro, um eine Kopie zu fertigen.",
+            "text_question": "Was ist zu tun?",
+            "text_answer": {
+                "answer": [
+                    "Sie bitten den Bürger einen Moment draußen Platz zu nehmen, damit Sie eine Kopie machen.",
+                    "Der Bürger soll mit einer Kopie wiederkommen."
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Dadurch sparen Sie Ihrer Behörde Kopierkosten, aber es bedeutet gleichzeitig einen Mehraufwand für den Bürger. Der Bürger müsste noch einmal wegen demselben Anliegen wiederkommen und dies könnte für ihn weitere Folgen nach sich ziehen.",
+                    "Da Sie freundlich und bürgerorientiert arbeiten sollen, tun Sie dem Bürger den Gefallen und machen schnell eine Kopie. Damit ist Zeit geplant und Sie können den Vorgang schneller bearbeiten."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    0
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 16,
+            "facts": "Sie sind MitarbeiterIn im Kinder- und Jugendgesundheitsdienst und wollen die Liste der aktuellen Namen der Kinder für die Einschuluntersuchungen an den Amtsarzt per E-Mail (unverschlüsselt) senden.",
+            "text_question": "Was tun Sie?",
+            "text_answer": {
+                "answer": [
+                    "Ich schicke die Mail unbedenklich an den Amtsarzt.",
+                    "Ich wende mich an die IT-Stelle und frage nach was zu tun ist."
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Sehr gefährlich! Da die gesendete E-Mail unverschlüsselt versendet wird, können Angreifer diese auf anderen Servern mitlesen. Somit ist kein Schutz der Daten mehr gegeben und Sie verstoßen gegen Art. 4 des IT-Sicherheitsgesetzes. Hier verlangt der Gesetzgeber ausdrücklich die Verschlüsselung durch die „Anwendung eines als sicher anerkannten Verschlüsselungsverfahrens“, um personenbezogene Daten gegen Angriffe von außen abzusichern.",
+                    "Gute Entscheidung! Die IT-Stelle wird Ihnen zeigen, wie man E-Mails verschlüsselt und somit personenbezogene Daten vor möglichen Angreifern schützt.."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    1
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 17,
+            "facts": "Ein Kindsvater ruft bei den Beiständen im Jugendamt an und will die Anschrift seines minderjährigen Kindes erfahren, da er diesen eine Geburtstagskarte schicken möchte.",
+            "text_question": "Was tun Sie?",
+            "text_answer": {
+                "answer": [
+                    "Ich gebe ihm die Adresse, es ist schließlich sein Kind.",
+                    "Ich rufe die Kindesmutter an, ob ich dem Kindesvater die Adresse geben darf. Falls nicht biete ich Ihr an die Geburtstagskarte entgegenzunehmen um Sie dann weiterzuschicken."
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Sehr gefährlich! Sie geben nicht nur vertrauliche Daten weiter sondern gefährden unter Umständen noch Mutter und Kind.",
+                    "Das ist die richtige Entscheidung."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    1
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 18,
+            "facts": "Sie arbeiten in der Personalabteilung und wirken bei der Erarbeitung einer Datenbank über die Beschäftigten des öffentlichen Dienstes mit.",
+            "text_question": "Können Schäden durch die Verarbeitung, Verbreitung oder Übermittlung falscher oder unvollständiger Daten entstehen?",
+            "text_answer": {
+                "answer": [
+                    "Ja",
+                    "Nein"
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Falsch! Es kann zur Entstehung falscher Datenbanken. Dies hat zur Folge, dass Informationen verfälscht sind oder es zu falschen Auswertungen/Statistiken kommt.",
+                    "Richtig! Es kann zur Entstehung falscher Datenbanken kommen."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    0
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 19,
+            "facts": "Die Firma Heinrich erhält vom Bezirksamt Treptow-Köpenick die Vergabe eines Zuschusses für den Bau eines Kindergartens. Sie sind Mitarbeiter in der IT-Stelle und zuständig für den Onlineautritt. Aufgrund unzureichender Konzentration veröffentlichen Sie nun unrichtige Angaben über die Vergabe des Bauprojektes, so dass nun augenscheinlich Firma Albrecht den Zuschuss erhält.",
+            "text_question": "Entstehen bei einer Veröffentlichung von verfälschten Daten Ansehensverluste?",
+            "text_answer": {
+                "answer": [
+                    "Ja",
+                    "Nein"
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Falsch! Es könnte beispielsweise finanzielle Verluste zur Folge haben, da Kunden ihre Verträge aufgrund des Vertrauensverlustes kündigen.",
+                    "Richtig! Es könnte beispielsweise finanzielle Verluste zur Folge haben, da Kunden ihre Verträge aufgrund des Vertrauensverlustes kündigen."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    0
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 20,
+            "facts": "In diesem Quiz geht es um die BSI-Standards 100-2",
+            "text_question": "Aber was bedeutet eigentlich „BSI“?",
+            "text_answer": {
+                "answer": [
+                    "Bundesamt für Sicherheit in der Informationstechnik",
+                    "Bundesamt für sichere Installationen"
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Falsch. BSI ist die Abkürzung für „Bundesamt für Sicherheit in der Informationstechnik“ und befasst sich mit allen Fragen rund um die IT-Sicherheit in der Informationsgesellschaft. Ziel des BSI ist es, den sicheren Einsatz von Informations- und Kommunikationstechnik in unserer Gesellschaft zu ermöglichen und voranzutreiben. Das BSI wurde am 1. Januar 1991 gegründet und gehört zum Geschäftsbereich des Bundesministeriums des Innern.",
+                    "Richtig, das BSI befasst sich mit allen Fragen rund um die IT-Sicherheit in der Informationsgesellschaft. Ziel des BSI ist es, den sicheren Einsatz von Informations- und Kommunikationstechnik in unserer Gesellschaft zu ermöglichen und voranzutreiben. Das BSI wurde am 1. Januar 1991 gegründet und gehört zum Geschäftsbereich des Bundesministeriums des Innern."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    0
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 21,
+            "facts": "Das BSI adressiert unter anderem Wirtschaftsunternehmen mit Ihren Angeboten.",
+            "text_question": "Gehört die öffentliche Verwaltung auch zu der Zielgruppe?",
+            "text_answer": {
+                "answer": [
+                    "Ja",
+                    "Nein"
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Falsch, auch die öffentliche Verwaltung (Bund, Länder und Kommunen) wird neben Wirtschaftsunternehmen, Wissenschafts- und Forschungseinrichtungen und Privatanwender adressiert.",
+                    "Richtig, es werden außerdem noch Wirtschaftsunternehmen, Wissenschafts- und Forschungseinrichtungen und Privatanwender adressiert."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    0
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 22,
+            "facts": "Das BSI arbeitet mit der öffentlichen Verwaltung zusammen.",
+            "text_question": "Arbeitet das BSI auch mit anderen deutschen Behörden, zum Beispiel dem BND, zusammen?",
+            "text_answer": {
+                "answer": [
+                    "Ja",
+                    "Nein"
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Falsch, Behörden in Deutschland stellt das BSI auf Anfrage technische Expertise und Beratung zur Verfügung. Gemäß BSI-Gesetz (§3 Abs. 1 S. 2 Nr. 13 BSIG) gehört es zu den Aufgaben des BSI, auch den Bundesnachrichtendienst (BND) bei der Wahrnehmung seiner gesetzlichen Aufgaben zu unterstützen, um Tätigkeiten zu verhindern oder zu erforschen, die gegen die Sicherheit in der Informationstechnik gerichtet sind oder unter Nutzung der Informationstechnik erfolgen. Dabei berät das BSI den BND beispielsweise zu Fragen der Informationssicherheit und des Geheimschutzes, insbesondere zum Schutz der Netze des BND.",
+                    "Richtig, auf Anfrage stellt das BSI technische Expertise und Beratung zur Verfügung. Gemäß BSI-Gesetz (§3 Abs. 1 S. 2 Nr. 13 BSIG) gehört es zu den Aufgaben des BSI, auch den Bundesnachrichtendienst (BND) bei der Wahrnehmung seiner gesetzlichen Aufgaben zu unterstützen, um Tätigkeiten zu verhindern oder zu erforschen, die gegen die Sicherheit in der Informationstechnik gerichtet sind oder unter Nutzung der Informationstechnik erfolgen. Dabei berät das BSI den BND beispielsweise zu Fragen der Informationssicherheit und des Geheimschutzes, insbesondere zum Schutz der Netze des BND."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    0
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 23,
+            "facts": "Sie sind Mitarbeiter im Ordnungsamt und regelmäßig im Außendienst. Für diese Zwecke besitzen Sie ein Diensthandy.",
+            "text_question": "Ist das BSI auch für den Schutz der mobilen Kommunikation (in diesem Fall Diensthandys) zuständig?",
+            "text_answer": {
+                "answer": [
+                    "Ja",
+                    "Nein"
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Falsch, bei der Nutzung von Diensthandys ist es für das BSI entscheidend, welches Mobilgerät Sie nutzen und welchen Schutzbedarf die jeweils zu kommunizierenden Informationen haben. Geht es dabei um personenbezogene Daten (Einzelangaben mit Personenbezug wie Name und Anschrift) stehen der Verwaltung spezielle vom BSI zugelassene Lösungen zur Verfügung. Sollte dies nicht der Fall sein, können Sie weitgehend ein Gerät Ihrer Wahl nutzen.",
+                    "Richtig, bei der Nutzung von Diensthandys ist es für das BSI entscheidend, welches Mobilgerät Sie nutzen und welchen Schutzbedarf die jeweils zu kommunizierenden Informationen haben. Geht es dabei um personenbezogene Daten (Einzelangaben mit Personenbezug wie Name und Anschrift) stehen der Verwaltung spezielle vom BSI zugelassene Lösungen zur Verfügung. Sollte dies nicht der Fall sein, können Sie weitgehend ein Gerät Ihrer Wahl nutzen."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    0
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 24,
+            "facts": "Mit Datenschutz wird vor allem der Schutz der Daten an deren Integrität, Vertraulichkeit und Verfügbarkeit bezeichnet.",
+            "text_question": "Was bedeutet „Integrität von Daten“?",
+            "text_answer": {
+                "answer": [
+                    "Daten sollen über einen bestimmten Zeitraum verändert werden können und inkonsistent bleiben.",
+                    "Daten müssen konsistent und korrekt vorgehalten werden, um die Integrität in der zu gewährleisten."
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Falsch, der Begriff Integrität kommt vom lateinischen Wort integritas und bedeutet ‚Unversehrtheit', ‚Reinheit' und ‚Unbescholtenheit‘. Es bezeichnet den Zustand des Datenbestandes in der Datenverarbeitung. Daten müssen jederzeit konsistent und korrekt vorgehalten werden, um die Integrität in der zu gewährleisten.",
+                    "Richtig, der Begriff Integrität kommt vom lateinischen Wort integritas und bedeutet ‚Unversehrtheit', ‚Reinheit' und ‚Unbescholtenheit‘. Es ist neben der Verfügbarkeit und Vertraulichkeit eines der drei klassischen Ziele der Informationssicherheit."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    1
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 25,
+            "facts": "Es gibt drei sogenannte Grundwerte der Informationssicherheit",
+            "text_question": "Was sind die Grundwerte?",
+            "text_answer": {
+                "answer": [
+                    "Verständlichkeit, Integrität, Verbesserung",
+                    "Vertraulichkeit, Integrität, Verfügbarkeit"
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Falsch, Aufgabe der Informationssicherheit ist der angemessene Schutz der Grundwerte Vertraulichkeit, Integrität (Unverfälschtheit) und Verfügbarkeit von Informationen.",
+                    "Richtig: Aufgabe der Informationssicherheit ist der angemessene Schutz der Grundwerte Vertraulichkeit, Integrität (Unverfälschtheit) und Verfügbarkeit von Informationen."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    1
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 26,
+            "facts": "Sie sind Mitarbeiter der Unterhaltsvorschusstelle und müssen einen Vater ausfindig machen. Daher besuchen Sie eine Internetseite die Ihnen eventuell dabei behilflich sein kann. Sie müssen den Namen sowie das Geburtsdatum des Vaters angeben.",
+            "text_question": "Woran erkennen Sie, dass die Daten sicher übertragen werden? (mehrere Antworten möglich)",
+            "text_answer": {
+                "answer": [
+                    "Sie waren bereits zuvor auf der Seite und kennen deren Inhalt.",
+                    "Die URL der aufgerufenen Internetseite beginnt mit https://",
+                    "Die URL der aufgerufenen Internetseite beginnt mit http://",
+                    "Auf der aufgerufenen Seite erscheint der Hinweis, dass diese Seite sicher ist"
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Leider falsch. Es ist keine Garantie, dass Sie die Website bereits kennen oder Ihnen auf dieser versichert wird, dass diese Seite sicher ist. Achten Sie immer darauf, dass Sie eine Website mit https:// und dem Schloß-Symbol in der Adresszeile besuchen. Da Sie dort Namen und Geburtsdaten angeben, kann man mit diesen sensiblen Daten sehr viel Schaden anrichten. Um an diese heranzukommen versuchen potentielle Angreifer vertrauenswürdig zu wirken und würden alles schreiben um an diese Daten heranzukommen.",
+                    "Super, https:// ist eine Variante von http:// (Hypertext Transfer Protokoll), die zusätzliche Sicherheit durch die Verschlüsselung der Daten erreicht wird, verspricht. Sie erkennen es an dem Schloß-Symbol in der Adresszeile."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    1
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 27,
+            "facts": "Sie sind MitarbeiterIn in der öffentlichen Verwaltung und öffnen Ihr Outlook E-Mail Postfach. Sie haben eine Spam-Mail erhalten.",
+            "text_question": "Wie verhalten Sie sich?",
+            "text_answer": {
+                "answer": [
+                    "Da meine Kollegen und Kolleginnen auch Katzen-Fans sind, leite ich die E-Mail mit den süßen Katzenfotos weiter.",
+                    "Ich lösche die E-Mail umgehend."
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Falsch, trotz süßer Katzenfotos dürfen Sie nicht vergessen das es sich dabei um eine Spam-Mail handelt. Spam-Mails gehören grundsätzlich in den Papierkorb. Manchmal erkennt man sie nicht sofort. Seien Sie deshalb grundsätzlich misstrauisch und öffnen keine Anhänge von unbekannten Absendern oder folgen Links. Auch Zahlungsaufforderungen sollten Sie niemals nachkommen. Falls Sie zweifeln können Sie sich jederzeit an die IT-Stelle wenden.",
+                    "Völlig richtig! Spam-Mails gehören grundsätzlich in den Papierkorb. Manchmal erkennt man sie nicht sofort. Seien Sie deshalb grundsätzlich misstrauisch und öffnen keine Anhänge von unbekannten Absendern oder folgen Links. Auch Zahlungsaufforderungen sollten Sie niemals nachkommen. Falls Sie zweifeln können Sie sich jederzeit an die IT-Stelle wenden."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    1
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 28,
+            "facts": "Der BSI-Standard 100-2 wird auch IT-Grundschutz-Vorgehensweise genannt.",
+            "text_question": "Was beschreibt diese Vorgehensweise?",
+            "text_answer": {
+                "answer": [
+                    "Er beschreibt wie ein Managementsystem für Informationssicherheit in der Praxis aufgebaut und betrieben werden kann.",
+                    "Er beschreibt alle risikobezogenen Arbeitsschritte bei der Umsetzung des IT-Grundschutzes."
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Falsch! Diese Beschreibung trifft auf den BSI-Standard 200-3: Risikomanagement zu. Der BSI-Standard 100-2: IT-Grundschutz-Vorgehensweise beschreibt Schritt für Schritt, wie ein Managementsystem für Informationssicherheit in der Praxis aufgebaut und betrieben werden kann.",
+                    "Richtig! Die IT-Grundschutz-Vorgehensweise geht sehr ausführlich darauf ein, wie ein Sicherheitskonzept in der Praxis erstellt werden kann, wie angemessene Sicherheitsmaßnahmen ausgewählt werden können und was bei der Umsetzung des Sicherheitskonzeptes zu beachten ist."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    0
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 29,
+            "facts": "Die Grundwerte des BSI-Standards 100-2 sind Vertraulichkeit, Integrität und Verfügbarkeit von persönlichen Daten.",
+            "text_question": "Welche Auswirkungen hat der Verlust dieser Grundwerte?",
+            "text_answer": {
+                "answer": [
+                    "Ein Verlust der Grundwerte hat nur negative Innenwirkung für die Behörde, speziell für den verursachenden Mitarbeiter und keine Außenwirkung.",
+                    "Ansehens – und Vertrauensverlust der Behörde, sowie Demoralisierung der Mitarbeiter."
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Falsch! Durch den Verlust der Grundwerte können verschiedenartige negative Innen- oder Außenwirkungen entstehen, wie zum Beispiel Ansehens – und Vertrauensverlust der Behörde, sowie Demoralisierung der Mitarbeiter.",
+                    "Richtig! Dadurch können verschiedenartige negative Innen- oder Außenwirkungen entstehen. Weitere Beispiele sind Beeinträchtigung der Beziehungen zusammenarbeitender Behörden oder verlorenes Vertrauen in die Arbeitsqualität einer Behörde."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    1
+                ]
+            },
+            "points": {
+                "point": 1
+            }
+        },
+        {
+            "questionId": 30,
+            "facts": "Die informationelle Selbstbestimmung ist das Recht des Einzelnen, selbst über die Verwendung und Preisgabe der personenenbezogenen Daten zu bestimmen.",
+            "text_question": "Wodurch besteht die Gefahr einer Verletzung des informationellen Selbstbestimmungsrechts bis hin zu einem Missbrauch personenbezogener Daten?",
+            "text_answer": {
+                "answer": [
+                    "Das informationelle Selbstbestimmungsrecht wird u. a. beeinträchtigt durch die unzulässige Erhebung personenbezogener Daten ohne Rechtsgrundlage oder Einwilligung und durch die unbefugte Weitergabe personenbezogener Daten.",
+                    "Eine Verletzung besteht bereits darin, wenn personenbezogene Daten für einen zulässigen Zweck erhoben werden."
+                ]
+            },
+            "answer_reason": {
+                "reason": [
+                    "Falsch! Eine Verletzung würde bestehen, wenn die Nutzung von personenbezogenen Daten zu einem anderen als dem bei der Erhebung zulässigen Zweck verwendet werden.",
+                    "Richtig! Personenbezogene Daten dürfen nicht ohne Einwilligung oder Rechtsgrundlage erhoben und weitergegeben werden."
+                ]
+            },
+            "answerId": {
+                "id": [
+                    0
+                ]
+            },
+            "points": {
+                "point": 1
             }
         }
     ]
