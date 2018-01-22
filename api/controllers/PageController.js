@@ -120,6 +120,7 @@ module.exports = {
 
                             function finalResult(getsumOfMaxPoints, sumOfPoints) {
                                 var sum = (sumOfPoints / getsumOfMaxPoints) * 100
+                                sum = sum.toFixed(2)
 
                                 return sum;
                             }
