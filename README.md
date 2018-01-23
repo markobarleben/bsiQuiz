@@ -12,7 +12,7 @@ After sucessefully answer the security survey finaly the user get a certificate.
 
 ## object.json
 
-All what you need to do is to fill out the object.json. You found this file here: */api/controllers/* 
+All what you need to do is to fill out the object.json. You find this file here: */api/controllers/* 
 
         {
             "questionId": 1,
