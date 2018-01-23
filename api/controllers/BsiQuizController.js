@@ -71,25 +71,38 @@ module.exports = {
 
                             for (i in JSON_DATA.questions) {
 
+                                /***********************************************************************
+                                * responseFalseAnswer if user should not choose enough boxes 
+                                ************************************************************************/
+
                                 if (JSON_DATA.questions[i].questionId == answer.questionId) {
 
                                     var answerReasonFromJsonObject = JSON_DATA.questions[i].answer_reason.reason;
+
+                                    /***********************************************************************
+                                    * responseFalseAnswer if user should not choose enough boxes 
+                                    ************************************************************************/
 
                                     const seroPoints = 0;
                                     const falseAnswer = answerReasonFromJsonObject[0];
                                     const responseFalseAnswer = [falseAnswer, answer.questionId, seroPoints, JSON_DATA.questions.length]
 
+                                    /***********************************************************************
+                                    * compare answer.lenght if not the right lenght user gets FALSE response 
+                                    ************************************************************************/
+
                                     if (!answer.answerid || JSON_DATA.questions[i].answerId.id.length != answer.answerid.length) {
                                         return res.send(responseFalseAnswer);
+
                                     } else {
 
                                         var answerID = JSON_DATA.questions[i].answerId.id
 
 
-                                        /** 
-                                        * sort answer array low to high data id
-                                        */
-
+                                        /****************************************
+                                        * sort answer array from user / min to max
+                                        *****************************************/
+                                       
                                         var answerId_Int = answer.answerid.map(Number);
 
                                         answerId_Int.sort(function (a, b) {
@@ -97,10 +110,10 @@ module.exports = {
                                         });
 
 
-                                        /** 
-                                        * compare two arrays
-                                        */
-
+                                        /*****************************************************
+                                        * compare answerId in object.json with answer from user
+                                        ******************************************************/
+                                    
                                         function diff(answerID, answerId_Int) {
 
                                             for (y in answerID) {
@@ -114,11 +127,10 @@ module.exports = {
                                         var compareAnswersFromUserAndJsonObject = diff(answerID, answerId_Int);
 
 
-
-                                        /**
-                                        * calculate maximum points from Object.json
-                                        */
-
+                                        /****************************************
+                                        * calculate maximum points in object.json 
+                                        *****************************************/
+                                      
                                         function calculateSumOfPoints(JSON_DATA) {
 
                                             var sumOfMaxQuestionPoints = 0
@@ -135,9 +147,9 @@ module.exports = {
                                         const getsumOfMaxPoints = calculateSumOfPoints(JSON_DATA)
 
 
-                                        /**
-                                         * response message to user False answer
-                                         */
+                                            /*********************************
+                                             * response message to user FALSE 
+                                             *********************************/
 
                                         if (compareAnswersFromUserAndJsonObject === false) {
 
@@ -145,9 +157,9 @@ module.exports = {
 
                                             return res.send(responseFalse);
 
-                                            /**
-                                             * response message to user true answer
-                                             */
+                                            /*********************************
+                                             * response message to user TRUE 
+                                             *********************************/
 
                                         } else {
 
