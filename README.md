@@ -39,7 +39,14 @@ All what you need to do is to fill out the object.json. You found this file here
                 "point": 1
             }
         },
-        
+
+## homepage.ejs
+
+You can design your own start page. You find the homepage.ejs here: /views/homepage.ejs
+
+## Styles
+
+Maybe you want change the color or the font size. All the information can you find in the layout.ejs file. You found layout.ejs here: /views/layout.ejs
  
 # Hints
 Works only in Safari or Chrome (Desktop)
