@@ -1,18 +1,23 @@
-<ul class="list-group fa-ul">
-    <li class="list-group-item"><i class="fa-li fa fa-calendar"></i> <%- currentDay %></li>
-    <li class="list-group-item"><i class="fa-li fa fa-user-circle-o"></i>
-        <%- user %>
-    </li>
-    <li class="list-group-item"><i class="fa-li fa fa-bullseye"></i>
-        <%- sumOfMaxQuestionPoints %>
-    </li>
-    <li class="list-group-item"><i class="fa-li fa fa-check-square"></i>
-        <%- points %>
-    </li>
-    <li class="list-group-item"><i class="fa-li fa fa-percent"></i>
-        <%- percent %>
-    </li>
-    <li class="list-group-item result"><i class="fa-li fa fa-trophy"></i>BESTANDEN <button type="button" class="btn btn-default btn-sm" id="getYourCertificate">Drucken Sie Ihr Zertifikat</button></li>
-</ul>
 
-<iframe id="printf" name="printf" frameborder="0" src="/certificate" ></iframe>
+    <ul class="list-group fa-ul">
+        <li class="list-group-item"><i class="fa-li fa fa-calendar"></i>
+            <%- currentDay %>
+        </li>
+        <li class="list-group-item"><i class="fa-li fa fa-user-circle-o"></i>
+            <%- user %>
+        </li>
+        <li class="list-group-item"><i class="fa-li fa fa-bullseye"></i>
+            <%- sumOfMaxQuestionPoints %>
+        </li>
+        <li class="list-group-item"><i class="fa-li fa fa-check-square"></i>
+            <%- points %>
+        </li>
+        <li class="list-group-item"><i class="fa-li fa fa-percent"></i>
+            <%- percent %>
+        </li>
+        <li class="list-group-item result"><i class="fa-li fa fa-trophy"></i>BESTANDEN</li>
+    </ul>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-sx-12" style="margin-top:2em; margin-bottom:2em;" >
+<button type="button" class="btn btn-default btn-sm" id="getYourCertificate">Drucken Sie Ihr Zertifikat</button></div>
+
+<iframe id="printf" name="printf" frameborder="0" src="/certificate"></iframe>

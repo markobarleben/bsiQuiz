@@ -81,13 +81,16 @@
     .container .answerArea {
       margin: 0 auto;
       margin-top: 1em;
+      margin-bottom: 2em;
+    }
+
+    .answerArea .col_modalButton {
+      margin-top:2em;
+      padding-right:4em;
     }
 
     .modalButton {
       float: right !important;
-      margin-top: 5%;
-      margin-right: 0;
-      margin-bottom: 2%;
       font-weight: 300;
     }
 
@@ -121,10 +124,6 @@
 
     .row-eq-height>[class^=col]:first-of-type .answerBox_boolean {
       flex-grow: 1;
-    }
-
-    .row_question {
-      width: 100%;
     }
 
     .answerBox_boolean {
@@ -178,17 +177,13 @@
       margin: auto;
     }
 
-    .rowMainPage {
-      margin-top: 5%;
-      text-align: center;
-    }
-
     .rowMainPage .col_input {
       display: flex;
       flex-direction: row;
       align-items: stretch;
       margin: 0 auto;
-      margin-top: 30px;
+      margin-top: 50px;
+      margin-bottom:50px;
     }
 
     .rowMainPage .col_input #input {
@@ -202,6 +197,7 @@
     .introduction {
       display: block;
       margin: 0 auto;
+      margin-top:50px;
     }
 
     .intro {
@@ -283,10 +279,8 @@
       color: #1A1651;
     }
 
-
     .row-final {
-      min-height: 500px;
-      height: 500px;
+      width: 100%;      
     }
 
     .row-final h1 {
@@ -298,11 +292,11 @@
       margin-top: 15px;
       display: inline-block;
       margin: 0 auto;
+      text-align: center;
     }
 
-    .final h3 {
+    .final h2 {
       color: #DDFFF7;
-      text-align: left;
     }
       
     .row-final p {
@@ -317,21 +311,22 @@
       color: #DDFFF7;
       list-style-type: none;
       text-align: left;
-      padding-top: 5px;
       margin: 0 auto;
+      margin-top:30px;
+      display: inline-block;
     }
 
-    .final ul .btn {
-      float: right;
-      margin-top: 10px;
-      margin-bottom: 0;
+    .final ul li i {
+      margin-top:10px;
+    }
+
+    .final ul li btn {
+      text-align: center;
+      margin:0 auto;
     }
 
     .final .list-group-item {
       background: transparent;
-      padding-bottom: 10px;
-      padding-top: 5px;
-      margin-top: 5px;
     }
 
     .card h6 {
@@ -483,6 +478,10 @@
       .answerBox_boolean {
         margin-top: 1em;
       }
+
+      .answerArea .col_modalButton {
+        padding-right:2em;
+      }
         
     .row-final p {
       padding-top:20px;
@@ -589,7 +588,7 @@ print
               <li>Laura Kühn</li>
               <li>Tu Anh Le Cong</li>
               <li>Katja Belkin</li>
-                <li>Julia Bläßing</li>
+              <li>Julia Bläßing</li>
             </ul>
           </div>
           <div class="modal-footer">
