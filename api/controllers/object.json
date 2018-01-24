@@ -82,7 +82,7 @@
             "text_answer": {
                 "answer": [
                     "Daten sollen über einen bestimmten Zeitraum verändert werden können und inkonsistent bleiben.",
-                    "Daten sollen über einenb bestimmten Zeitraum vollständig und unverändert erhalten bleiben."
+                    "Daten sollen über einen bestimmten Zeitraum vollständig und unverändert erhalten bleiben."
                 ]
             },
             "answer_reason": {
@@ -506,7 +506,7 @@
             "text_question": "Geben Sie ihm die Adresse seines Kindes?",
             "text_answer": {
                 "answer": [
-                    "Ja, ich gebe ihm die Adresse damnit er sein Kind schnellstmöglich sehen kann.",
+                    "Ja, ich gebe ihm die Adresse damit er sein Kind schnellstmöglich sehen kann.",
                     "Nein, ich verweise ihn an die Meldestelle."
                 ]
             },
