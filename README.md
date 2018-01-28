@@ -1,5 +1,5 @@
+[![Version](https://img.shields.io/badge/Version-0.8-orange.svg)]
 [![Website](https://img.shields.io/website-up-down-green-red/http/shields.io.svg?label=bsiquiz.herokuapp.com&style=plastic)](https://bsiQuiz.herokuapp.com)
-[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&style=plastic)](https://twitter.com/MaBarleb)
 [![Crates.io](https://img.shields.io/crates/l/rustc-serialize.svg?style=plastic)]()
 
 # bsiQuiz v.0.7
@@ -54,4 +54,6 @@ Maybe you want change the color or the font size. All the information can you fi
  
 # Hints
 Works only in Safari or Chrome (Desktop)
+
+[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&style=plastic)](https://twitter.com/MaBarleb)
 
