@@ -1,4 +1,4 @@
-[![Version](https://img.shields.io/badge/Version-2.0-green.svg)]()
+[![Version](https://img.shields.io/badge/Version-0.8-green.svg)]()
 [![Crates.io](https://img.shields.io/crates/l/rustc-serialize.svg?style=plastic)]()
 [![npm](https://img.shields.io/npm/v/npm.svg?style=plastic)]()
 [![Website](https://img.shields.io/website-up-down-green-red/http/shields.io.svg?label=bsiquiz.herokuapp.com&style=plastic)](https://bsiQuiz.herokuapp.com)
