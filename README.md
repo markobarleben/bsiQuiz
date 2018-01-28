@@ -56,5 +56,5 @@ Maybe you want change the color or the font size. All the information can you fi
 # Hints
 Works only in Safari or Chrome (Desktop)
 
-[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&style=plastic)](https://twitter.com/MaBarleb)
+[![Twitter_follow](https://img.shields.io/twitter/url/https/twitter.com/fold_left.svg?style=social&label)](https://twitter.com/mabarleb)
 
