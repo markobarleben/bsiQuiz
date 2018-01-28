@@ -1,3 +1,5 @@
+[![Website](https://img.shields.io/website-up-down-green-red/http/shields.io.svg?label=bsiquiz.herokuapp.com&style=plastic)](https://bsiQuiz.herokuapp.com)
+
 # bsiQuiz v.0.7
 
 ![bsiQuiz](https://github.com/markobarleben/bsiQuiz/blob/master/bsiQuiz.gif)
