@@ -6,10 +6,12 @@
 # bsiQuiz
 
 ![bsiQuiz](https://github.com/markobarleben/bsiQuiz/blob/master/bsiQuiz.gif)
-Works only in Safari or Chrome (Desktop)
 
 # Description 
-bsiQuiz is a student project. Goal of this project was to develop a survey software especially for Civil servants and employees of public administration.
+bsiQuiz is a student project. Goal of this project was to develop a survey software especially for Civil servants and employees of public administration. </br>
+
+Works only in Safari or Chrome (Desktop)
+
 
 # How it works
 After sucessefully answer the security survey finaly the user get a certificate. 
