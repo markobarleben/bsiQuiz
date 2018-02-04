@@ -2,6 +2,7 @@
 [![Crates.io](https://img.shields.io/crates/l/rustc-serialize.svg?style=plastic)]()
 [![npm](https://img.shields.io/npm/v/npm.svg?style=plastic)]()
 [![Website](https://img.shields.io/website-up-down-green-red/http/shields.io.svg?label=bsiquiz.herokuapp.com&style=plastic)](https://bsiQuiz.herokuapp.com)
+[![Twitter_follow](https://img.shields.io/twitter/url/https/twitter.com/fold_left.svg?style=social&label)](https://twitter.com/mabarleb)
 
 # bsiQuiz
 
@@ -60,5 +61,3 @@ A certificate is a good proof to show other people your great knowledge about th
 
 Maybe you want change the color or the font size. All the information can you find in the layout.ejs file. You found layout.ejs here: /views/layout.ejs
  
-[![Twitter_follow](https://img.shields.io/twitter/url/https/twitter.com/fold_left.svg?style=social&label)](https://twitter.com/mabarleb)
-
